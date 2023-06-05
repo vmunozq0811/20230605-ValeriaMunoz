@@ -1,0 +1,245 @@
+$ history
+    1  cs
+    2  l
+    3  git-clone
+    4  S
+    5  S/Git/
+    6  Git
+    7  cd IdeaProjects/Programación2-Tarea1
+    8  cd IdeaProjects
+    9  cd Programacion2-Tarea1
+   10  git clone
+   11  s
+   12  l
+   13  exit
+   14  cd Git
+   15  cd GitTutorial
+   16  git clone <https://github.com/vmunoz0811/GitTutorial.git>
+   17  git clone https://github.com/vmunoz0811/GitTutorial.git
+   18  git commit -m "This is the git tutorial for programming class"
+   19  cd Programming2
+   20  cd HTML
+   21  cd MeLi
+   22  git clone https://github.com/vmunoz0811/MeLiTaller2.git
+   23  cd Programming2
+   24  cd HTML
+   25  cd MeLi
+   26  git init
+   27  git config --global user.name vmunoz0811
+   28  git config -- global user.email vmunozq@unbosque.edu.co
+   29  git init
+   30  git clone https://github.com/vmunoz0811/Taller2-MeLi.git
+   31  #!/bin/sh
+   32  # Add User Utility
+   33  #
+   34  # A simple utility for adding new users to the properties file used
+   35  # for domain management authentication out of the box.
+   36  #
+   37  DIRNAME=`dirname "$0"`
+   38  GREP="grep"
+   39  . "$DIRNAME/common.sh"
+   40  # OS specific support (must be 'true' or 'false').
+   41  cygwin=false;
+   42  if  [ `uname|grep -i CYGWIN` ]; then     cygwin=true; fi
+   43  # For Cygwin, ensure paths are in UNIX format before anything is touched
+   44  if $cygwin ; then     [ -n "$JBOSS_HOME" ] &&         JBOSS_HOME=`cygpath --unix "$JBOSS_HOME"`;     [ -n "$JAVA_HOME" ] &&         JAVA_HOME=`cygpath --unix "$JAVA_HOME"`;     [ -n "$JAVAC_JAR" ] &&         JAVAC_JAR=`cygpath --unix "$JAVAC_JAR"`; fi
+   45  # Setup JBOSS_HOME
+   46  RESOLVED_JBOSS_HOME=`cd "$DIRNAME/.."; pwd`
+   47  if [ "x$JBOSS_HOME" = "x" ]; then     JBOSS_HOME=$RESOLVED_JBOSS_HOME; else  SANITIZED_JBOSS_HOME=`cd "$JBOSS_HOME"; pwd`;  if [ "$RESOLVED_JBOSS_HOME" != "$SANITIZED_JBOSS_HOME" ]; then    echo "WARNING: The JBOSS_HOME ($SANITIZED_JBOSS_HOME) that this script uses points to a different installation than the one that this script resides in ($RESOLVED_JBOSS_HOME). Unpredictable results may occur.";    echo "";  fi; fi
+   48  export JBOSS_HOME
+   49  # Setup the JVM
+   50  if [ "x$JAVA" = "x" ]; then     if [ "x$JAVA_HOME" != "x" ]; then         JAVA="$JAVA_HOME/bin/java";     else         JAVA="java";     fi; fi
+   51  # Set default modular JVM options
+   52  setDefaultModularJvmOptions $JAVA_OPTS
+   53  JAVA_OPTS="$JAVA_OPTS $DEFAULT_MODULAR_JVM_OPTIONS"
+   54  if [ "x$JBOSS_MODULEPATH" = "x" ]; then     JBOSS_MODULEPATH="$JBOSS_HOME/modules"; fi
+   55  # For Cygwin, switch paths to Windows format before running java
+   56  if $cygwin; then     JBOSS_HOME=`cygpath --path --windows "$JBOSS_HOME"`;     JAVA_HOME=`cygpath --path --windows "$JAVA_HOME"`;     JBOSS_MODULEPATH=`cygpath --path --windows "$JBOSS_MODULEPATH"`; fi
+   57  # Sample JPDA settings for remote socket debugging
+   58  #JAVA_OPTS="$JAVA_OPTS -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=y"
+   59  # Uncomment to override standalone and domain user location
+   60  #JAVA_OPTS="$JAVA_OPTS -Djboss.server.config.user.dir=../standalone/configuration -Djboss.domain.config.user.dir=../domain/configuration"
+   61  JAVA_OPTS="$JAVA_OPTS"
+   62  eval \"$JAVA\" $JAVA_OPTS          -jar \""$JBOSS_HOME"/jboss-modules.jar\"          -mp \""${JBOSS_MODULEPATH}"\"          org.jboss.as.domain-add-user          '"$@"'
+   63  #!/bin/sh
+   64  # Add User Utility
+   65  #
+   66  # A simple utility for adding new users to the properties file used
+   67  # for domain management authentication out of the box.
+   68  #
+   69  DIRNAME=`dirname "$0"`
+   70  GREP="grep"
+   71  . "$DIRNAME/common.sh"
+   72  # OS specific support (must be 'true' or 'false').
+   73  cygwin=false;
+   74  if  [ `uname|grep -i CYGWIN` ]; then     cygwin=true; fi
+   75  # For Cygwin, ensure paths are in UNIX format before anything is touched
+   76  if $cygwin ; then     [ -n "$JBOSS_HOME" ] &&         JBOSS_HOME=`cygpath --unix "$JBOSS_HOME"`;     [ -n "$JAVA_HOME" ] &&         JAVA_HOME=`cygpath --unix "$JAVA_HOME"`;     [ -n "$JAVAC_JAR" ] &&         JAVAC_JAR=`cygpath --unix "$JAVAC_JAR"`; fi
+   77  # Setup JBOSS_HOME
+   78  RESOLVED_JBOSS_HOME=`cd "$DIRNAME/.."; pwd`
+   79  if [ "x$JBOSS_HOME" = "x" ]; then     JBOSS_HOME=$RESOLVED_JBOSS_HOME; else  SANITIZED_JBOSS_HOME=`cd "$JBOSS_HOME"; pwd`;  if [ "$RESOLVED_JBOSS_HOME" != "$SANITIZED_JBOSS_HOME" ]; then    echo "WARNING: The JBOSS_HOME ($SANITIZED_JBOSS_HOME) that this script uses points to a different installation than the one that this script resides in ($RESOLVED_JBOSS_HOME). Unpredictable results may occur.";    echo "";  fi; fi
+   80  export JBOSS_HOME
+   81  # Setup the JVM
+   82  if [ "x$JAVA" = "x" ]; then     if [ "x$JAVA_HOME" != "x" ]; then         JAVA="$JAVA_HOME/bin/java";     else         JAVA="java";     fi; fi
+   83  # Set default modular JVM options
+   84  setDefaultModularJvmOptions $JAVA_OPTS
+   85  JAVA_OPTS="$JAVA_OPTS $DEFAULT_MODULAR_JVM_OPTIONS"
+   86  if [ "x$JBOSS_MODULEPATH" = "x" ]; then     JBOSS_MODULEPATH="$JBOSS_HOME/modules"; fi
+   87  # For Cygwin, switch paths to Windows format before running java
+   88  if $cygwin; then     JBOSS_HOME=`cygpath --path --windows "$JBOSS_HOME"`;     JAVA_HOME=`cygpath --path --windows "$JAVA_HOME"`;     JBOSS_MODULEPATH=`cygpath --path --windows "$JBOSS_MODULEPATH"`; fi
+   89  # Sample JPDA settings for remote socket debugging
+   90  #JAVA_OPTS="$JAVA_OPTS -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=y"
+   91  # Uncomment to override standalone and domain user location
+   92  #JAVA_OPTS="$JAVA_OPTS -Djboss.server.config.user.dir=../standalone/configuration -Djboss.domain.config.user.dir=../domain/configuration"
+   93  JAVA_OPTS="$JAVA_OPTS"
+   94  eval \"$JAVA\" $JAVA_OPTS          -jar \""$JBOSS_HOME"/jboss-modules.jar\"          -mp \""${JBOSS_MODULEPATH}"\"          org.jboss.as.domain-add-user          '"$@"'
+   95  #!/bin/sh
+   96  # Add User Utility
+   97  #
+   98  # A simple utility for adding new users to the properties file used
+   99  # for domain management authentication out of the box.
+  100  #
+  101  DIRNAME=`dirname "$0"`
+  102  GREP="grep"
+  103  . "$DIRNAME/common.sh"
+  104  # OS specific support (must be 'true' or 'false').
+  105  cygwin=false;
+  106  if  [ `uname|grep -i CYGWIN` ]; then     cygwin=true; fi
+  107  # For Cygwin, ensure paths are in UNIX format before anything is touched
+  108  if $cygwin ; then     [ -n "$JBOSS_HOME" ] &&         JBOSS_HOME=`cygpath --unix "$JBOSS_HOME"`;     [ -n "$JAVA_HOME" ] &&         JAVA_HOME=`cygpath --unix "$JAVA_HOME"`;     [ -n "$JAVAC_JAR" ] &&         JAVAC_JAR=`cygpath --unix "$JAVAC_JAR"`; fi
+  109  # Setup JBOSS_HOME
+  110  RESOLVED_JBOSS_HOME=`cd "$DIRNAME/.."; pwd`
+  111  if [ "x$JBOSS_HOME" = "x" ]; then     JBOSS_HOME=$RESOLVED_JBOSS_HOME; else  SANITIZED_JBOSS_HOME=`cd "$JBOSS_HOME"; pwd`;  if [ "$RESOLVED_JBOSS_HOME" != "$SANITIZED_JBOSS_HOME" ]; then    echo "WARNING: The JBOSS_HOME ($SANITIZED_JBOSS_HOME) that this script uses points to a different installation than the one that this script resides in ($RESOLVED_JBOSS_HOME). Unpredictable results may occur.";    echo "";  fi; fi
+  112  export JBOSS_HOME
+  113  # Setup the JVM
+  114  if [ "x$JAVA" = "x" ]; then     if [ "x$JAVA_HOME" != "x" ]; then         JAVA="$JAVA_HOME/bin/java";     else         JAVA="java";     fi; fi
+  115  # Set default modular JVM options
+  116  setDefaultModularJvmOptions $JAVA_OPTS
+  117  JAVA_OPTS="$JAVA_OPTS $DEFAULT_MODULAR_JVM_OPTIONS"
+  118  if [ "x$JBOSS_MODULEPATH" = "x" ]; then     JBOSS_MODULEPATH="$JBOSS_HOME/modules"; fi
+  119  # For Cygwin, switch paths to Windows format before running java
+  120  if $cygwin; then     JBOSS_HOME=`cygpath --path --windows "$JBOSS_HOME"`;     JAVA_HOME=`cygpath --path --windows "$JAVA_HOME"`;     JBOSS_MODULEPATH=`cygpath --path --windows "$JBOSS_MODULEPATH"`; fi
+  121  # Sample JPDA settings for remote socket debugging
+  122  #JAVA_OPTS="$JAVA_OPTS -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=y"
+  123  # Uncomment to override standalone and domain user location
+  124  #JAVA_OPTS="$JAVA_OPTS -Djboss.server.config.user.dir=../standalone/configuration -Djboss.domain.config.user.dir=../domain/configuration"
+  125  JAVA_OPTS="$JAVA_OPTS"
+  126  eval \"$JAVA\" $JAVA_OPTS          -jar \""$JBOSS_HOME"/jboss-modules.jar\"          -mp \""${JBOSS_MODULEPATH}"\"          org.jboss.as.domain-add-user          '"$@"'
+  127  #!/bin/sh
+  128  # Add User Utility
+  129  #
+  130  # A simple utility for adding new users to the properties file used
+  131  # for domain management authentication out of the box.
+  132  #
+  133  DIRNAME=`dirname "$0"`
+  134  GREP="grep"
+  135  . "$DIRNAME/common.sh"
+  136  # OS specific support (must be 'true' or 'false').
+  137  cygwin=false;
+  138  if  [ `uname|grep -i CYGWIN` ]; then     cygwin=true; fi
+  139  # For Cygwin, ensure paths are in UNIX format before anything is touched
+  140  if $cygwin ; then     [ -n "$JBOSS_HOME" ] &&         JBOSS_HOME=`cygpath --unix "$JBOSS_HOME"`;     [ -n "$JAVA_HOME" ] &&         JAVA_HOME=`cygpath --unix "$JAVA_HOME"`;     [ -n "$JAVAC_JAR" ] &&         JAVAC_JAR=`cygpath --unix "$JAVAC_JAR"`; fi
+  141  # Setup JBOSS_HOME
+  142  RESOLVED_JBOSS_HOME=`cd "$DIRNAME/.."; pwd`
+  143  if [ "x$JBOSS_HOME" = "x" ]; then     JBOSS_HOME=$RESOLVED_JBOSS_HOME; else  SANITIZED_JBOSS_HOME=`cd "$JBOSS_HOME"; pwd`;  if [ "$RESOLVED_JBOSS_HOME" != "$SANITIZED_JBOSS_HOME" ]; then    echo "WARNING: The JBOSS_HOME ($SANITIZED_JBOSS_HOME) that this script uses points to a different installation than the one that this script resides in ($RESOLVED_JBOSS_HOME). Unpredictable results may occur.";    echo "";  fi; fi
+  144  export JBOSS_HOME
+  145  # Setup the JVM
+  146  if [ "x$JAVA" = "x" ]; then     if [ "x$JAVA_HOME" != "x" ]; then         JAVA="$JAVA_HOME/bin/java";     else         JAVA="java";     fi; fi
+  147  # Set default modular JVM options
+  148  setDefaultModularJvmOptions $JAVA_OPTS
+  149  JAVA_OPTS="$JAVA_OPTS $DEFAULT_MODULAR_JVM_OPTIONS"
+  150  if [ "x$JBOSS_MODULEPATH" = "x" ]; then     JBOSS_MODULEPATH="$JBOSS_HOME/modules"; fi
+  151  # For Cygwin, switch paths to Windows format before running java
+  152  if $cygwin; then     JBOSS_HOME=`cygpath --path --windows "$JBOSS_HOME"`;     JAVA_HOME=`cygpath --path --windows "$JAVA_HOME"`;     JBOSS_MODULEPATH=`cygpath --path --windows "$JBOSS_MODULEPATH"`; fi
+  153  # Sample JPDA settings for remote socket debugging
+  154  #JAVA_OPTS="$JAVA_OPTS -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=y"
+  155  # Uncomment to override standalone and domain user location
+  156  #JAVA_OPTS="$JAVA_OPTS -Djboss.server.config.user.dir=../standalone/configuration -Djboss.domain.config.user.dir=../domain/configuration"
+  157  JAVA_OPTS="$JAVA_OPTS"
+  158  eval \"$JAVA\" $JAVA_OPTS          -jar \""$JBOSS_HOME"/jboss-modules.jar\"          -mp \""${JBOSS_MODULEPATH}"\"          org.jboss.as.domain-add-user          '"$@"'
+  159  #!/bin/sh
+  160  # Add User Utility
+  161  #
+  162  # A simple utility for adding new users to the properties file used
+  163  # for domain management authentication out of the box.
+  164  #
+  165  DIRNAME=`dirname "$0"`
+  166  GREP="grep"
+  167  . "$DIRNAME/common.sh"
+  168  # OS specific support (must be 'true' or 'false').
+  169  cygwin=false;
+  170  if  [ `uname|grep -i CYGWIN` ]; then     cygwin=true; fi
+  171  # For Cygwin, ensure paths are in UNIX format before anything is touched
+  172  if $cygwin ; then     [ -n "$JBOSS_HOME" ] &&         JBOSS_HOME=`cygpath --unix "$JBOSS_HOME"`;     [ -n "$JAVA_HOME" ] &&         JAVA_HOME=`cygpath --unix "$JAVA_HOME"`;     [ -n "$JAVAC_JAR" ] &&         JAVAC_JAR=`cygpath --unix "$JAVAC_JAR"`; fi
+  173  # Setup JBOSS_HOME
+  174  RESOLVED_JBOSS_HOME=`cd "$DIRNAME/.."; pwd`
+  175  if [ "x$JBOSS_HOME" = "x" ]; then     JBOSS_HOME=$RESOLVED_JBOSS_HOME; else  SANITIZED_JBOSS_HOME=`cd "$JBOSS_HOME"; pwd`;  if [ "$RESOLVED_JBOSS_HOME" != "$SANITIZED_JBOSS_HOME" ]; then    echo "WARNING: The JBOSS_HOME ($SANITIZED_JBOSS_HOME) that this script uses points to a different installation than the one that this script resides in ($RESOLVED_JBOSS_HOME). Unpredictable results may occur.";    echo "";  fi; fi
+  176  export JBOSS_HOME
+  177  # Setup the JVM
+  178  if [ "x$JAVA" = "x" ]; then     if [ "x$JAVA_HOME" != "x" ]; then         JAVA="$JAVA_HOME/bin/java";     else         JAVA="java";     fi; fi
+  179  # Set default modular JVM options
+  180  setDefaultModularJvmOptions $JAVA_OPTS
+  181  JAVA_OPTS="$JAVA_OPTS $DEFAULT_MODULAR_JVM_OPTIONS"
+  182  if [ "x$JBOSS_MODULEPATH" = "x" ]; then     JBOSS_MODULEPATH="$JBOSS_HOME/modules"; fi
+  183  # For Cygwin, switch paths to Windows format before running java
+  184  if $cygwin; then     JBOSS_HOME=`cygpath --path --windows "$JBOSS_HOME"`;     JAVA_HOME=`cygpath --path --windows "$JAVA_HOME"`;     JBOSS_MODULEPATH=`cygpath --path --windows "$JBOSS_MODULEPATH"`; fi
+  185  # Sample JPDA settings for remote socket debugging
+  186  #JAVA_OPTS="$JAVA_OPTS -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=y"
+  187  # Uncomment to override standalone and domain user location
+  188  #JAVA_OPTS="$JAVA_OPTS -Djboss.server.config.user.dir=../standalone/configuration -Djboss.domain.config.user.dir=../domain/configuration"
+  189  JAVA_OPTS="$JAVA_OPTS"
+  190  eval \"$JAVA\" $JAVA_OPTS          -jar \""$JBOSS_HOME"/jboss-modules.jar\"          -mp \""${JBOSS_MODULEPATH}"\"          org.jboss.as.domain-add-user          '"$@"'
+  191  cd /c/xampp/htdocs
+  192  ls
+  193  git clone https://github.com/Azptmdr/Modulo-Nomina.git
+  194  cd "C:\xampp\htdocs"
+  195  git clone https://github.com/HerParra12/TiendaSoftware.git
+  196  cd "C:\xampp\htdocs"
+  197  cd TiendaSoftware
+  198  "C:\xampp\htdocs\TiendaSoftware"
+  199  "C:\xampp\htdocs\TiendaSoftware
+  200  cd "C:\xampp\htdocs\TiendaSoftware"
+  201  git checkout master
+  202  git pull
+  203  php -r "readfile('https://getcomposer.org/installer');" | php
+  204  git remote add origin https://github.com/vmunozq0811/20230605-ValeriaMunoz.git
+  205  git branch -M main
+  206  git push -u origin main
+  207  echo "# 20230605-ValeriaMunoz" >> README.md
+  208  git init
+  209  git add README.md
+  210  git commit -m "first commit"
+  211  git branch -M main
+  212  git remote add origin https://github.com/vmunozq0811/20230605-ValeriaMunoz.git
+  213  git push -u origin main
+  214  touch comandos.txt main.js index.html
+  215  git add .
+  216  git commit -m "commit 01 de Valeria Muñoz"
+  217  git push -u origin main
+  218  git branch feature01
+  219  git checkout feature01
+  220  mkdir Terminal Hardware
+  221  cd Terminal
+  222  touch resumen.txt
+  223  cp resumen.txt ../Hardware
+  224  cd ..
+  225  ls -R
+  226  git add .
+  227  git commit -m "commit 02 de Valeria Muñoz"
+  228  git push origin feature01
+  229  git branch feature02
+  230  git checkout feature02
+  231  cd Terminal/resumen.txt
+  232  cd Terminal
+  233  echo "cd, ls, touch, mkdir, echo" > resumen.txt
+  234  cd ..
+  235  cd Hardware
+  236  echo "placa madre, procesador, Memoria RAM" > resumen.txt
+  237  git add .
+  238  cd ..
+  239  git add .
+  240  git commit -m "commit 03 de Valeria Muñoz"
+  241  git push origin feature02
+  242  git checkout main
+  243  mv comandos.txt comandosUtilizados.txt
+  244  history
